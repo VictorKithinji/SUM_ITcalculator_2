@@ -33,19 +33,19 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="137.598"/>
                 </Grid.ColumnDefinitions>
-                <Button Content="+" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" VerticalAlignment="Top" Width="86" FontFamily="Copperplate Gothic Light" FontSize="14"/>
-                <Button Content="-" HorizontalAlignment="Left" Height="22" Margin="128,10,0,0" VerticalAlignment="Top" Width="86" Grid.ColumnSpan="2" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
-                <Button Content="Tan(y" HorizontalAlignment="Left" Height="22" Margin="42,10,0,0" VerticalAlignment="Top" Width="86" Grid.Column="1" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
-                <Button Content="x" HorizontalAlignment="Left" Height="22" Margin="10,51,0,0" VerticalAlignment="Top" Width="86" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
-                <Button Content="/" HorizontalAlignment="Left" Height="22" Margin="128,51,0,0" VerticalAlignment="Top" Width="86" Grid.ColumnSpan="2" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
-                <Button Content="Cos(y" HorizontalAlignment="Left" Height="22" Margin="42,51,0,0" VerticalAlignment="Top" Width="86" Grid.Column="1" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
-                <Button Content="X^(y" HorizontalAlignment="Left" Height="22" Margin="10,92,0,0" VerticalAlignment="Top" Width="86" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
-                <Button Content="X^(1/y" HorizontalAlignment="Left" Height="22" Margin="128,92,0,0" VerticalAlignment="Top" Width="86" Grid.ColumnSpan="2" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
-                <Button Content="Sin(y" HorizontalAlignment="Left" Height="22" Margin="42,92,0,0" VerticalAlignment="Top" Width="86" Grid.Column="1" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
+                <Button Content="+" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" VerticalAlignment="Top" Width="86" FontFamily="Copperplate Gothic Light" FontSize="14" Click="Button_Click_1"/>
+                <Button x:Name="MinusBtn" Content="-" HorizontalAlignment="Left" Height="22" Margin="128,10,0,0" VerticalAlignment="Top" Width="86" Grid.ColumnSpan="2" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14" Click="MinusBtn_Click"/>
+                <Button x:Name="TanBtn" Content="Tan(y" HorizontalAlignment="Left" Height="22" Margin="42,10,0,0" VerticalAlignment="Top" Width="86" Grid.Column="1" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
+                <Button x:Name="MultiplyBtn" Content="x" HorizontalAlignment="Left" Height="22" Margin="10,51,0,0" VerticalAlignment="Top" Width="86" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14" Click="MultiplyBtn_Click"/>
+                <Button x:Name="DivideBtn" Content="/" HorizontalAlignment="Left" Height="22" Margin="128,51,0,0" VerticalAlignment="Top" Width="86" Grid.ColumnSpan="2" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14" Click="DivideBtn_Click"/>
+                <Button x:Name="CosBtn" Content="Cos(y" HorizontalAlignment="Left" Height="22" Margin="42,51,0,0" VerticalAlignment="Top" Width="86" Grid.Column="1" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
+                <Button x:Name="SqrBtn" Content="X^(y" HorizontalAlignment="Left" Height="22" Margin="10,92,0,0" VerticalAlignment="Top" Width="86" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
+                <Button x:Name="SqrRootBtn" Content="X^(1/y" HorizontalAlignment="Left" Height="22" Margin="128,92,0,0" VerticalAlignment="Top" Width="86" Grid.ColumnSpan="2" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
+                <Button x:Name="SinBtn" Content="Sin(y" HorizontalAlignment="Left" Height="22" Margin="42,92,0,0" VerticalAlignment="Top" Width="86" Grid.Column="1" FontFamily="Copperplate Gothic Light" FontWeight="Bold" FontSize="14"/>
             </Grid>
         </Border>
-        <Button Content=")" HorizontalAlignment="Left" Height="57" Margin="407,476,0,0" VerticalAlignment="Top" Width="112" FontSize="16" FontWeight="Bold" FontFamily="Cooper Black"/>
-        <Button Content="X%y" HorizontalAlignment="Left" Height="59" Margin="407,563,0,0" VerticalAlignment="Top" Width="112" FontSize="16" FontWeight="Bold" FontFamily="Cooper Black"/>
+        <Button x:Name="CloseBracketBtn" Content=")" HorizontalAlignment="Left" Height="57" Margin="407,476,0,0" VerticalAlignment="Top" Width="112" FontSize="16" FontWeight="Bold" FontFamily="Cooper Black"/>
+        <Button x:Name="modulusBtn" Content="X%y" HorizontalAlignment="Left" Height="59" Margin="407,563,0,0" VerticalAlignment="Top" Width="112" FontSize="16" FontWeight="Bold" FontFamily="Cooper Black"/>
         <Button x:Name="Btn0" Content="0" HorizontalAlignment="Left" Height="45" Margin="32,408,0,0" VerticalAlignment="Top" Width="218" FontSize="18" FontFamily="Poor Richard" FontWeight="Bold" Click="Btn0_Click"/>
         <Button x:Name="CEbtn" Content="CE" HorizontalAlignment="Left" Height="45" Margin="407,408,0,0" VerticalAlignment="Top" Width="112" FontFamily="Cooper Black" FontSize="22" Foreground="#FFBA3232"/>
         <Button x:Name="DPbtn" Content="." HorizontalAlignment="Left" Height="45" Margin="280,408,0,0" VerticalAlignment="Top" Width="94" FontSize="20" FontFamily="Constantia" FontWeight="Bold" Click="DPbtn_Click"/>

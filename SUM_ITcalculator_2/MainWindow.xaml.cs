@@ -1,6 +1,8 @@
 ﻿using System;
+//hello. GIT test
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +25,49 @@ namespace SUM_ITcalculator_2
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        
+
+        public void BasicOperations(string Operation)
+        {
+
+            string[] basicOperations = new string[2];
+            if (previewOperationsPlane.Text.Contains(Operation))//
+            {
+
+                basicOperations[0] = previewOperationsPlane.Text.Substring(0, previewOperationsPlane.Text.IndexOf(Operation));
+
+                //now I get the index of the operation sign; i then use it to capture the numbers that come after it
+                int OperatorIndex = previewOperationsPlane.Text.IndexOf(Operation);//
+                basicOperations[1] = previewOperationsPlane.Text.Substring(OperatorIndex + 1);
+
+
+                if (Operation == "+")
+                {
+                    int Response = int.Parse(basicOperations[0]) + int.Parse(basicOperations[1]);
+                    ResponsePlane.Text = Response.ToString();
+                }
+                if (Operation == "-")
+                {
+                    int Response = int.Parse(basicOperations[0]) - int.Parse(basicOperations[1]);
+                    ResponsePlane.Text = Response.ToString();
+                }
+                if (Operation == "*")
+                {
+                    int Response = int.Parse(basicOperations[0]) * int.Parse(basicOperations[1]);
+                    ResponsePlane.Text = Response.ToString();
+                }
+                if (Operation == "/")
+                {
+                    int Response = int.Parse(basicOperations[0]) / int.Parse(basicOperations[1]);
+                    ResponsePlane.Text = Response.ToString();
+                }
+
+                //int Response = int.Parse(basicOperations[0]) + int.Parse(basicOperations[1]);
+                //ResponsePlane.Text = Response.ToString();
+            }
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -216,6 +261,102 @@ namespace SUM_ITcalculator_2
             InputPlane.Text="0";
             previewOperationsPlane.Text="Preview";
 
+        }
+
+
+//OPERATORS START HERE 😃😃
+
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //plus sign
+            BasicOperations("+");
+            InputPlane.Text = "0";
+            if (previewOperationsPlane.Text == "Preview")
+            {
+                previewOperationsPlane.Text = InputPlane.Text + "+";
+            }
+            else
+            {
+                //previewOperationsPlane.Text = previewOperationsPlane.Text += "+";
+                if (ResponsePlane.Text == "0")
+                {
+                    previewOperationsPlane.Text = previewOperationsPlane.Text += "+";
+                }
+                else
+                {
+                    previewOperationsPlane.Text = ResponsePlane.Text += "+";
+                }
+            }
+        }
+
+        private void MinusBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //minus sign
+            BasicOperations("-");
+            InputPlane.Text = "0";
+            if (previewOperationsPlane.Text == "Preview")
+            {
+                previewOperationsPlane.Text = InputPlane.Text + "-";
+            }
+            else
+            {
+                //previewOperationsPlane.Text = previewOperationsPlane.Text += "+";
+                if (ResponsePlane.Text == "0")
+                {
+                    previewOperationsPlane.Text = previewOperationsPlane.Text += "-";
+                }
+                else
+                {
+                    previewOperationsPlane.Text = ResponsePlane.Text += "-";
+                }
+            }
+        }
+
+        private void MultiplyBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //multiply sign
+            BasicOperations("*");
+            InputPlane.Text = "0";
+            if (previewOperationsPlane.Text == "Preview")
+            {
+                previewOperationsPlane.Text = InputPlane.Text + "*";
+            }
+            else
+            {
+                //previewOperationsPlane.Text = previewOperationsPlane.Text += "+";
+                if (ResponsePlane.Text == "0")
+                {
+                    previewOperationsPlane.Text = previewOperationsPlane.Text += "*";
+                }
+                else
+                {
+                    previewOperationsPlane.Text = ResponsePlane.Text += "*";
+                }
+            }
+        }
+
+        private void DivideBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //plus sign
+            BasicOperations("/");
+            InputPlane.Text = "0";
+            if (previewOperationsPlane.Text == "Preview")
+            {
+                previewOperationsPlane.Text = InputPlane.Text + "/";
+            }
+            else
+            {
+                //previewOperationsPlane.Text = previewOperationsPlane.Text += "+";
+                if (ResponsePlane.Text == "0")
+                {
+                    previewOperationsPlane.Text = previewOperationsPlane.Text += "/";
+                }
+                else
+                {
+                    previewOperationsPlane.Text = ResponsePlane.Text += "/";
+                }
+            }
         }
     }
 }
